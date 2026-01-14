@@ -1,10 +1,25 @@
 .page {
   width: 100%;
   background-color: #EEEEEE;
-  padding: 2px;;
+  padding: 2px;
+  
+  height: calc(100vh - 10px) !important;
 }
 
 .pagebody {
   width: 99%;
   background-color: #E1E1E1;
+}
+
+.sidemenu{
+
+  padding: 1px;
+}
+.contenuto{
+
+  padding: 10px;
+  background-color: #fafafa;
+  width: 90%;
+  overflow-y: scroll;
+  height: calc(100vh - 40px) !important;
 }
