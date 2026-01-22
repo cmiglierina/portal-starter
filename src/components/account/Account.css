@@ -1,0 +1,13 @@
+.user_image {
+    width: 50px;
+    height: 80px;
+}
+
+.img-label{
+    font-size: 15px;
+    padding: 3px;
+}
+
+.img-label-title {
+    font-weight: bold;
+}

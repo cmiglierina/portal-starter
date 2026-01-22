@@ -1,33 +1,21 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { ToastContainer, Bounce } from 'react-toastify';
-import { loginFailure, loginUser } from '../../store/slices/authSlice';
+import { Bounce, ToastContainer } from 'react-toastify';
 import './Login.css'
 
-function Login() {
+function Signup() {
 
-    const dispatch = useDispatch();
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
 
-
-    const handleLogin = async (e) => {
+    const handleRegistration = (e) => {
         e.preventDefault();
-        if (username && password) {
-            try {
-                await dispatch(loginUser({ username, password })).unwrap();
-                navigate('/');
-            } catch (error) {
-                dispatch(loginFailure(error.message));
-            }
-        } else {
-            dispatch(loginFailure('Insert both email and password'));
-        }
     }
 
     return (
-        <form onSubmit={handleLogin}>
+        <form>
             <div className="back">
                 <div className="div-center">
                     <div className="content">
@@ -35,7 +23,7 @@ function Login() {
                             <h1><i className="bi bi-person-circle login-icon" /></h1>
                         </div>
                         <hr />
-                        <div >
+                        <form onSubmit={handleRegistration}>
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1">Email address</label>
 
@@ -66,18 +54,30 @@ function Login() {
                                     &nbsp;
                                 </div>
                             </div>
+                            <div className="form-group">
+                                <label htmlFor="exampleInputPassword2">Confirm password</label>
+                                <div className='input-div'>
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        id="exampleInputPassword2"
+                                        placeholder="Password"
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                        value={confirmPassword}
+                                    />
+                                    &nbsp;
+                                </div>
+                            </div>
                             <button type="submit" className="btn btn-primary">
-                                Login
+                                Sign in
                             </button>
                             <span className='span-error'></span>
                             <hr />
+
                             <button type="button" className="btn btn-link">
-                                Signup
+                                Go to Login page
                             </button>
-                            <button type="button" className="btn btn-link">
-                                Reset Password
-                            </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -98,4 +98,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Signup;

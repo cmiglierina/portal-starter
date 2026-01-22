@@ -1,25 +1,49 @@
 .page {
   width: 100%;
-  background-color: #EEEEEE;
-  padding: 2px;
-  
-  height: calc(100vh - 10px) !important;
+  background-color: #0e7ccf;
+  padding: 10px;
+  margin: auto;
+  height: calc(100vh - 5px) !important;
+
 }
 
 .pagebody {
   width: 99%;
-  background-color: #E1E1E1;
+  background-color: #CCCCCC;
+  
+  
 }
 
 .sidemenu{
-
   padding: 1px;
+  
+}
+
+.div-wrapper{
+  background-color: #CCCCCC;
+  padding: 0;
+  width: 97vw !important;
+  max-width: 97vw !important;
+  border-radius: 9px;
+  
 }
 .contenuto{
+  background-color: #FEFEFE;
+  padding: 0;
+  width: 100%;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  height: calc(100vh - 20px) !important;
+}
 
-  padding: 10px;
-  background-color: #fafafa;
-  width: 90%;
+.contenuto-body{
   overflow-y: scroll;
-  height: calc(100vh - 40px) !important;
+  height: 88vh !important;
+}
+
+.menu-col {
+  background-color: #CCCCCC;
+  padding: 2px 5px;
+  border-radius: 9px;
 }
